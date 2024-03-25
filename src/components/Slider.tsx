@@ -14,12 +14,12 @@ export const Slider = () => {
   useEffect(() => {
     getWidth();
   }, [slideRef, getWidth]);
-  console.log(slideParentRef.current?.scrollLeft, itemWidth);
 
   const onNextSlide = () => {
     if (slideParentRef.current === null) return;
     slideParentRef.current.scrollBy({
       left: -itemWidth,
+      behavior: "smooth",
     });
   };
 
@@ -27,10 +27,11 @@ export const Slider = () => {
     if (slideParentRef.current === null) return;
     slideParentRef.current.scrollBy({
       left: itemWidth,
+      behavior: "smooth",
     });
   };
   return (
-    <div className="relative">
+    <div className="relative md:hidden">
       <button
         className="bg-white w-10 h-10 rounded-full z-10 absolute top-[50%] left-3"
         onClick={onNextSlide}
@@ -50,7 +51,7 @@ export const Slider = () => {
         />
       </button>
       <div
-        className="overflow-scroll z-0 snap-mandatory snap-x relative w-screen"
+        className="overflow-scroll z-0 snap-mandatory snap-x relative w-screen "
         ref={slideParentRef}
       >
         <ul className="flex w-fit *:w-screen z-0">

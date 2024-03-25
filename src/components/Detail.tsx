@@ -1,6 +1,6 @@
 export const Detail = () => {
   return (
-    <div className="flex flex-col items-center gap-6 w-[400px] mx-auto p-2  align-start pt-10 font-sans">
+    <div className="flex flex-col items-center gap-6  p-2  align-start pt-10 font-sans">
       <p className="text-orange uppercase font-bold w-full">Sneaker company</p>
       <h3 className="font-bold text-3xl font-main">Fall Limited Edition Sneakders</h3>
       <p className="text-darkGrayishBlue text-base">

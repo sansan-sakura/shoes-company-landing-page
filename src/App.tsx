@@ -1,4 +1,4 @@
-import { Button } from "./components/Button";
+import { Buttons } from "./components/Buttons";
 import { Detail } from "./components/Detail";
 import { Header } from "./components/Header";
 import { Slider } from "./components/Slider";
@@ -9,9 +9,9 @@ function App() {
       <div>
         <Header />
         <Slider />
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 w-[400px] mx-auto mb-20">
           <Detail />
-          <Button />
+          <Buttons />
         </div>
       </div>
     </>
